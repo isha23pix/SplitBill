@@ -7,8 +7,10 @@
       
      <!-- <MenuBar1 /> -->
      <Sidebar />
-     <v-main class="mainSection" style="background-color: rgba(208, 195, 210, 0.848); ">
-  <FriendsComp/>
+     <v-main style="background-color: rgba(208, 195, 210, 0.848); ">
+  <!-- <FriendsComp/> -->
+  <FriendsMain/>
+
     </v-main>
 
   </v-app>
@@ -20,15 +22,19 @@
   import Sidebar from "../components/Sidebar.vue";
   import NavBar from "../components/NavBar.vue";
 //  import ChatList from '../components/ChatList.vue'
-import FriendsComp from "../components/Friends.vue"
+// import FriendsComp from "../components/Friends.vue"
+import FriendsMain from "../components/FriendsMain.vue" ; 
+
   export default defineComponent({
     name: "MaskGroup",
-    components: { NavBar,  Sidebar,FriendsComp},
+    components: { NavBar,  Sidebar, FriendsMain
+      // FriendsComp
+    },
   });
 </script>
 <style module>
 
-.friends{
+/* .friends{
   display: flex;
 }
 .chatListWrapper {
@@ -44,7 +50,7 @@ import FriendsComp from "../components/Friends.vue"
     width: 50px;
     height: 50px;
   } */
-   .notificationIcon:active  {
+   /* .notificationIcon:active  {
     color: aqua!important;;
   }
   
@@ -65,5 +71,5 @@ import FriendsComp from "../components/Friends.vue"
   }
   .icon{
     color: #673ab7;
-  }
+  } */ 
 </style>
