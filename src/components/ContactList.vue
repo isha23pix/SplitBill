@@ -30,13 +30,13 @@
                       <v-icon color="grey">mdi-message</v-icon>
                     </v-badge>
                   </div>
-                  <div v-else>
+                  <!-- <div v-else>
                     <v-icon :color="chat.seen ? '6e00ff' : 'default'">
                       {{ chat.seen ? 'mdi-check-all' : 'mdi-check' }}
                     </v-icon>
-                  </div>
+                  </div> -->
                 </v-list-item-action> 
-                <v-list-item-action-text class="custom-time">{{ chat.time }}</v-list-item-action-text>
+                <!-- <v-list-item-action-text class="custom-time">{{ chat.time }}</v-list-item-action-text> -->
               </div>
               </v-row>
             </v-col>
