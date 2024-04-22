@@ -3,7 +3,7 @@
     <v-row no-gutters>
       <v-col :cols="showLeftPanel ? 4 : 0" v-if="showLeftPanel">
         <div class="left-panel">
-          <v-card flat>
+          <v-card variant="flat" :elevation="0" color="transparent">
             <v-toolbar class="tool" color="rgba(208, 195, 210, 0.848)" dense flat>
             <v-row class="fill-height" no-gutters align="center">
               <v-col cols="5" class="px-0">
@@ -31,13 +31,13 @@
             </v-row>
           </v-toolbar>
       </v-card>
-          <ContactList/>
+      <ContactList @chat-selected="handleChatSelected"/>
         </div>
       </v-col>
 
       <v-col :cols="showLeftPanel ? 8 : 12">
         <div class="right-panel">
-          <ChatBox/>
+          <ChatBox :chat="selectedChat"/>
         </div>
       </v-col>
     </v-row>
@@ -68,6 +68,9 @@ export default {
       const smBreakpoint = 960; //width for 'sm' in Vuetify
       this.showLeftPanel = window.innerWidth >= smBreakpoint;
     },
+    handleChatSelected(chat) {
+      this.selectedChat = chat;
+    }
   },
 }
 </script>

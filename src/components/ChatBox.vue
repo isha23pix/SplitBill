@@ -132,7 +132,9 @@ import { defineComponent } from "vue";
 
    export default defineComponent({
      name: "ChatBox",
-  
+     props: {
+    chat: Object
+  }
    });
 </script>
 <style>

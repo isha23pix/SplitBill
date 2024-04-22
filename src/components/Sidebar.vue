@@ -98,10 +98,10 @@ font-family: var(--font-radley);
 font-size: var(--font-size-6xl);
 display:flex;
 }
-::v-deep .v-list-item + .v-list-item{
+:deep .v-list-item + .v-list-item{
 margin-top: 50px;/*spacing between buttons*/ 
 }
-::v-deep .icon {
+:deep .icon {
     color:var(--color-darkslategray) ;
     opacity: 1 !important; /*using important because otherwise we are getting the icons with a certain pre-defined opacity*/
 }
